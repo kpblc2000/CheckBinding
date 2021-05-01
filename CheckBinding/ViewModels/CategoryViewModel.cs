@@ -19,7 +19,7 @@ namespace CheckBinding.ViewModels
                 {
                     Id = i,
                     Name = $"Caterogy{i}"
-                });
+                }).ToArray();
             Categories = new List<Category>(lst);
         }
 

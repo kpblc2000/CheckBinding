@@ -21,6 +21,7 @@
         </Grid.RowDefinitions>
         <ComboBox Grid.Column="0" Grid.Row="0" 
                   ItemsSource="{Binding Categories}"
+                  SelectedItem="{Binding SelectedCategoryComboBox}"
                   >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -28,9 +29,10 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBlock Grid.Column="1" Grid.Row="0"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Path=SelectedCategoryComboBox.Name}"/>
         <ListBox Grid.Column="0" Grid.Row="1"
                  ItemsSource="{Binding Categories}"
+                 SelectedItem="{Binding SelectedCategoryListBox}"
                  >
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -38,7 +40,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBlock Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Path=SelectedCategoryListBox.Name}"/>
         
     </Grid>
 </Window>
